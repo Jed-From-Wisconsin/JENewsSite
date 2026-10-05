@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#f4f6f2">
+	<title>Speaker of Assembly | Wisconsin Legislature</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+	<header>
+		<div class="masthead">
+			<div class="shell brand">
+				<img class="brand-mark" src="Images/Speaker-Of-Assembly.png" alt="Speaker of Assembly logo">
+				<div>
+					<p class="brand-kicker">Wisconsin</p>
+					<p class="brand-name">Speaker of Assembly</p>
+					<p class="tagline">The latest news from the Wisconsin Legislature.</p>
+				</div>
+			</div>
+		</div>
+		<nav class="nav-bar" aria-label="Main navigation">
+			<ul class="shell nav-list">
+				<li><a href="#top">Home</a></li>
+				<li><a href="#news">News</a></li>
+				<li><a href="#community">Community</a></li>
+				<li><a href="#categories">Categories</a></li>
+				<li><a href="#legislature">State Legislature</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="shell" id="top">
+		<div class="page-grid">
+			<div>
+				<section id="news" aria-labelledby="lead-heading">
+					<article class="lead-story">
+						<div class="lead-copy">
+							<p class="section-kicker">Lead story</p>
+							<h1 id="lead-heading">Assembly Republicans announce Supermajority</h1>
+							<p>Republicans massively expand a previously razer-thin hold in the Assembly.</p>
+						</div>
+						<div class="image-wrap">
+							<img src="Images/Headline Image.jpg" alt="Headline Image">
+						</div>
+					</article>
+
+					<div class="story-grid" aria-label="More news stories">
+						<article class="story-card">
+							<div class="image-wrap">
+								<img src="images/SideStory1.jpg" alt="Side Story 1">
+							</div>
+							<h2>School Funding Pulled for Massive Rager</h2>
+							<p>Education · October 10, 2026</p>
+						</article>
+						<article class="story-card">
+							<div class="image-wrap">
+								<img src="images/SideStory2.jpg" alt="Side Story 2">
+							</div>
+							<h2>Caracals legalized in Wisconsin</h2>
+							<p>Politics · October 9, 2026</p>
+						</article>
+						<article class="story-card">
+							<div class="image-wrap">
+								<img src="images/SideStory3.jpg" alt="Side Story 3">
+							</div>
+							<h2>Mayor Woodford Dissolves Council, Declares Self King of Appleton</h2>
+							<p>Local · October 8, 2026</p>
+						</article>
+					</div>
+				</section>
+
+				<section class="community" id="community" aria-labelledby="community-heading">
+					<h2 id="community-heading">Welcome to Speaker of Assembly</h2>
+					<p>Speaker of Assembly brings you the latest news from Wisconsin's Legislature, Counties, and Municipalities.</p>
+				</section>
+
+				<section class="categories" id="categories" aria-labelledby="categories-heading">
+					<h2 id="categories-heading">Explore the news</h2>
+					<div class="category-list">
+						<a href="#news">Local</a>
+						<a href="#news">Government</a>
+						<a href="#news">Education</a>
+						<a href="#news">Business</a>
+						<a href="#news">Culture</a>
+						<a href="#news">Events</a>
+					</div>
+				</section>
+			</div>
+
+			<aside class="sidebar" id="legislature" aria-labelledby="legislature-heading">
+				<h2 class="sidebar-heading" id="legislature-heading">Wisconsin Legislature</h2>
+				<section class="chamber" aria-labelledby="assembly-heading">
+					<div class="chamber-header">
+						<h3 id="assembly-heading">State Assembly</h3>
+						<span class="chamber-total">99 seats</span>
+					</div>
+					<svg id="assembly-chart" viewBox="0 0 340 165" role="img" aria-label="Wisconsin State Assembly: 54 Republicans and 45 Democrats"></svg>
+					<div class="legend" aria-label="Party colors">
+	                    <span class="legend-item">
+		                <span class="legend-swatch democrat"></span>Democrat 45
+	                </span>
+	                    <span class="legend-item">
+		                <span class="legend-swatch republican"></span>Republican 54
+	                    </span>
+                    </div>
+					<p class="majority-note">54–45 Republican majority</p>
+				</section>
+
+				<section class="chamber" aria-labelledby="senate-heading">
+					<div class="chamber-header">
+						<h3 id="senate-heading">State Senate</h3>
+						<span class="chamber-total">33 seats</span>
+					</div>
+					<svg id="senate-chart" viewBox="0 0 340 150" role="img" aria-label="Wisconsin State Senate: 18 Republicans and 15 Democrats"></svg>
+					<div class="legend" aria-label="Party colors">
+	                    <span class="legend-item">
+		                <span class="legend-swatch democrat"></span>Democrat 15
+	                </span>
+	                    <span class="legend-item">
+		                <span class="legend-swatch republican"></span>Republican 18
+	                    </span>
+                    </div>
+					<p class="majority-note">18–15 Republican majority</p>
+				</section>
+			</aside>
+		</div>
+	</main>
+
+	<footer>
+		<div class="shell">© Your organization · Community news template</div>
+	</footer>
+					<p class="majority-note">18–15 Republican majority</p>
+				</section>
+			</aside>
+		</div>
+	</main>
+
+	<footer>
+		<div class="shell">© Your organization · Community news template</div>
+	</footer>
+
+	<script>
+	function drawSeats(chartId, ringCounts, republicanSeats, totalSeats) {
+		const svg = document.getElementById(chartId);
+		const centerX = 170;
+		const baseline = chartId === "assembly-chart" ? 145 : 132;
+
+		const rings = chartId === "assembly-chart"
+			? [
+				{ rx: 55, ry: 44 },
+				{ rx: 84, ry: 67 },
+				{ rx: 113, ry: 90 },
+				{ rx: 142, ry: 113 }
+			]
+			: [
+				{ rx: 58, ry: 45 },
+				{ rx: 88, ry: 69 },
+				{ rx: 118, ry: 93 }
+			];
+
+		// Build all seat positions first.
+		const positions = [];
+
+		ringCounts.forEach((seatCount, ringIndex) => {
+			const { rx, ry } = rings[ringIndex];
+
+			for (let seat = 0; seat < seatCount; seat += 1) {
+				const angle = Math.PI - (Math.PI * seat) / (seatCount - 1);
+
+				positions.push({
+					x: centerX + rx * Math.cos(angle),
+					y: baseline - ry * Math.sin(angle)
+				});
+			}
+		});
+
+		positions.sort((a, b) => a.x - b.x);
+
+		positions.forEach((position, index) => {
+			const dot = document.createElementNS(
+				"http://www.w3.org/2000/svg",
+				"circle"
+			);
+
+			dot.setAttribute("cx", position.x.toFixed(2));
+			dot.setAttribute("cy", position.y.toFixed(2));
+			dot.setAttribute(
+				"r",
+				chartId === "assembly-chart" ? "3.5" : "4.4"
+			);
+
+			// Democrats on the left, Republicans on the right.
+			const republicanStart = totalSeats - republicanSeats;
+			dot.setAttribute(
+				"class",
+				`seat-dot ${index >= republicanStart ? "republican" : "democrat"}`
+			);
+
+			svg.appendChild(dot);
+		});
+	}
+
+	drawSeats("assembly-chart", [15, 22, 28, 34], 54, 99);
+	drawSeats("senate-chart", [10, 11, 12], 18, 33);
+</script>
+
+</body>
+</html>
